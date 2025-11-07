@@ -3,6 +3,7 @@ package com.utn.productos.controller;
 import com.utn.productos.dto.ActualizarStockDTO;
 import com.utn.productos.dto.ProductoDTO;
 import com.utn.productos.dto.ProductoResponseDTO;
+import com.utn.productos.exception.ProductoNotFoundException;
 import com.utn.productos.model.Categoria;
 import com.utn.productos.model.Producto;
 import com.utn.productos.service.ProductoService;
@@ -40,7 +41,7 @@ public class ProductoController {
     @GetMapping("/{id}")
     public ResponseEntity<ProductoResponseDTO> obtenerPorId(@PathVariable Long id) {
         Producto producto = productoService.obtenerPorId(id)
-                .orElseThrow(() -> new RuntimeException("Producto no encontrado con ID: " + id));
+                .orElseThrow(() -> new ProductoNotFoundException(id));
         return ResponseEntity.ok(convertirAResponseDTO(producto));
     }
 
