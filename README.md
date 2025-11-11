@@ -43,10 +43,10 @@ ProductosApiApplication
 5. Abrir en el navegador:    
 - Swagger UI: http://localhost:8080/swagger-ui.html  
 - API Docs: http://localhost:8080/v3/api-docs  
-- Consola H2: http://localhost:8080/h2-console  
-JDBC URL: jdbc:h2:mem:productosdb  
-Usuario: sa  
-Contraseña: (vacía)
+- Consola H2: http://localhost:8080/h2-console    
+JDBC URL: jdbc:h2:mem:productosdb   
+Usuario: sa    
+Contraseña: (vacía)  
 
 ---
 
@@ -90,10 +90,10 @@ URL → http://localhost:8080/swagger-ui.html
 
 ### Consola H2:
 Permite verificar la base de datos en memoria con consultas SQL.
-URL → http://localhost:8080/h2-console
-JDBC URL → jdbc:h2:mem:productosdb
-User → sa
-Password → (vacía)
+URL → http://localhost:8080/h2-console  
+JDBC URL → jdbc:h2:mem:productosdb  
+User → sa  
+Password → (vacía)  
 
 ---
 
